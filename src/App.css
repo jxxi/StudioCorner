@@ -19,6 +19,7 @@
 }
 
 .App-intro {
+  align-content: center !important;
   font-size: large;
 }
 
