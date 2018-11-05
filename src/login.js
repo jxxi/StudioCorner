@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import ReactSignupLoginComponent from 'react-signup-login-component';
+import PropTypes from 'prop-types';
+import { Redirect } from "react-router-dom";
+import { MyStudios } from './MyStudios.js'
 
 class Login extends Component {
+
+  static contextTypes = {
+    router: PropTypes.object
+  }
 
   handleSignup(object)
   {
@@ -29,19 +36,35 @@ class Login extends Component {
 
   render() {
 
+    const AuthService = {
+      isAuthenticated: false,
+      authenticate(cb) {
+        this.isAuthenticated = true
+        setTimeout(cb, 100)
+      },
+      logout(cb) {
+        this.isAuthenticated = false
+        setTimeout(cb, 100)
+      }
+    }
+
     const signupWasClickedCallback = (data) => {
       console.log(data);
-      alert('Signup callback, see log on the console to see the data.');
     };
 
     const loginWasClickedCallback = (data) => {
       console.log(data);
-      alert('Login callback, see log on the console to see the data.');
+
+      AuthService.authenticate("");
+
+      if(AuthService.isAuthenticated)
+      {
+        this.context.router.history.push("/myStudios");
+      }
     };
 
     const recoverPasswordWasClickedCallback = (data) => {
       console.log(data);
-      alert('Recover password callback, see log on the console to see the data.');
     };
 
     return (
