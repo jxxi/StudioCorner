@@ -6,7 +6,7 @@ class Login extends Component {
   handleSignup(object)
   {
    return {
-     username: 'johndoe',
+     username: 'jasminedoe',
      password: '1234%##D',
      passwordConfirmation: '1234%##D'
    };
@@ -15,7 +15,7 @@ class Login extends Component {
   handleLogin(object)
   {
     return {
-      username: 'johndoe',
+      username: 'jasminedoe',
       password: '1234%##D'
     };
   };
@@ -23,7 +23,7 @@ class Login extends Component {
   handleRecoverPassword(object)
   {
     return {
-      username: 'johndoe'
+      username: 'jasminedoe'
     };
   };
 
@@ -45,9 +45,9 @@ class Login extends Component {
     };
 
     return (
-        <div>
+        <div className="d-flex justify-content-center" style={{alignItems: 'center', justifyContent: 'center'}}>
             <ReactSignupLoginComponent
-                title="My awesome company"
+                title="Welcome Back"
                 handleSignup={signupWasClickedCallback}
                 handleLogin={loginWasClickedCallback}
                 handleRecoverPassword={recoverPasswordWasClickedCallback}
@@ -61,28 +61,29 @@ class Login extends Component {
                 submitSignupCustomLabel="Signup"
                 goToSignupCustomLabel="Signup"
                 submitRecoverPasswordCustomLabel="Recover"
+                recoverPasswordTitle="Recover Password"
                 styles={{
-                      mainWrapper: { background: 'transparent', textAlign: 'center', opacity: '.98', fontFamily: 'Lato, sans-serif'},
+                      mainWrapper: { background: 'transparent', opacity: '.98', fontFamily: 'Lato, sans-serif', alignItems: 'center', justifyContent: 'center'},
                       mainTitle: {  },
                       flipper: { transition: '0.1s' },
                       signup: {
                         input: {  },
                         recoverPassword: {},
-                        button: { border: '2px solid #7CD6CE', background: 'transparent' },
+                        button: { border: '2px solid #FFBE2B', background: 'transparent' },
                       },
                       login: {
                         wrapper: { background: 'transparent' },
                         inputWrapper: {  },
                         input: {  },
                         recoverPasswordWrapper: {  },
-                        recoverPasswordButton: {  },
-                        button: { border: '2px solid #7CD6CE', background: 'transparent' },
+                        recoverPasswordButton: { border: '2px solid #FFBE2B', background: 'transparent' },
+                        button: { border: '2px solid #FFBE2B', background: 'transparent' },
                       },
                       recoverPassword: {
                         wrapper: { background: 'transparent' },
                         inputWrapper: {  },
                         input: {  },
-                        button: { border: '2px solid #7CD6CE', background: 'transparent' },
+                        button: { border: '2px solid #FFBE2B', background: 'transparent' },
                       },
                     }}
             />

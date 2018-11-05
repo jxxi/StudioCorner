@@ -3,24 +3,39 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 100px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #eaeaea;
   padding: 20px;
   color: white;
+  opacity: .85;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2em;
+  color: #000000;
+  font-weight: bold;
+}
+
+.App-title h2 {
+  color: #0FBBEC;
 }
 
 .App-intro {
+  align-items: center;
   align-content: center !important;
   font-size: large;
+  margin-top: 100px;
+}
+
+#light {
+  color: #0FBBEC;
+}
+
+login-button hover{
+  background-color: "#FFBE2B";
 }
 
 @keyframes App-logo-spin {
