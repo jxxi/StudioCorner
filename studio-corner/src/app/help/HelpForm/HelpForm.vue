@@ -1,11 +1,11 @@
 <template>
   <div :class="$style.form">
     <vue-grid>
-      <vue-breadcrumb :items="[{ label: 'Home', href: '/' }, { label: 'Form Example' }]" />
+      <vue-breadcrumb :items="[{ label: 'Home', href: '/' }, { label: 'Help' }]" />
 
       <vue-grid-row>
         <vue-grid-item class="vueGridItem">
-          <vue-headline level="1">Form example</vue-headline>
+          <vue-headline level="1">Help</vue-headline>
           <form-example />
         </vue-grid-item>
 
@@ -19,15 +19,15 @@
 import VueGrid from '@components/VueGrid/VueGrid.vue';
 import VueGridRow from '@components/VueGridRow/VueGridRow.vue';
 import VueGridItem from '@components/VueGridItem/VueGridItem.vue';
-import FormExample from '../FormExample/FormExample.vue';
+import Help from '../Help/Help.vue';
 import VueHeadline from '@components/VueHeadline/VueHeadline.vue';
 import VueBreadcrumb from '@components/VueBreadcrumb/VueBreadcrumb.vue';
 
 export default {
   metaInfo: {
-    title: 'vuesion - Form Example',
+    title: 'Help',
   },
-  components: { VueBreadcrumb, VueHeadline, FormExample, VueGridItem, VueGridRow, VueGrid },
+  components: { VueBreadcrumb, VueHeadline, Help, VueGridItem, VueGridRow, VueGrid },
   computed: {},
   data(): any {
     return {};

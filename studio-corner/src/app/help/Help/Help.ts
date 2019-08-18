@@ -1,12 +1,12 @@
 import { createLocalVue, mount } from '@vue/test-utils';
-import FormExample from './FormExample.vue';
+import HelpExample from './Help.vue';
 import { i18n } from '../../shared/plugins/i18n/i18n';
 
 const localVue = createLocalVue();
 
-describe('FormExample.vue', () => {
+describe('Help.vue', () => {
   test('renders component', () => {
-    const wrapper = mount<any>(FormExample, {
+    const wrapper = mount<any>(HelpExample, {
       localVue,
       i18n,
     });
